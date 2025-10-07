@@ -122,7 +122,7 @@ const goToGarden = () => {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15rem;
+  padding: 2%; /* instead of 15rem */
   color: white;
 }
 
@@ -159,9 +159,8 @@ const goToGarden = () => {
   flex: 1;
   background-size: cover;
   background-position: center;
-  padding: 5rem;
+  padding: 1%; /* instead of 5rem */
 }
-
 /* Story */
 .story {
   display: flex;
