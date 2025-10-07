@@ -17,6 +17,7 @@ export default {
 
 <style>
 body {
+  padding-top: 100px;
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #f7e9ec;
