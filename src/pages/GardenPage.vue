@@ -121,11 +121,11 @@ function selectCategory(category) {
   color: white;
 }
 .banner-text h1 {
-  font-size: 96px;
+  font-size: 74px;
   margin: 0;
 }
 .banner-text h2 {
-  font-size: 96px;
+  font-size: 74px;
   margin: 0;
   font-weight: 700;
 }
@@ -169,9 +169,10 @@ function selectCategory(category) {
 /* The oval shape */
 .featured-oval {
   background-color: #ffffff;
-  width: 1200px;
-  height: 200px;
+  width: 1000px;
+  height: 150px;
   border-radius: 50%;
+  border: 4px solid #b8a0b8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,7 +182,7 @@ function selectCategory(category) {
 .featured-oval h2 {
   color: #b8a0b8;
   font-family: 'Caprasimo', sans-serif;
-  font-size: 64px;
+  font-size: 42px;
   font-weight: 100;
   margin: 0;
 }
@@ -238,6 +239,7 @@ function selectCategory(category) {
   padding: 3rem 0;
 }
 .category-buttons {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -245,9 +247,9 @@ function selectCategory(category) {
   margin-bottom: 2rem;
 }
 .category-buttons button {
-  border: 5px solid #a8b9c3;
+  border: 3px solid #a8b9c3;
   background: A8B9C3;
-  color: #9a9d68;
+  color: #a8b9c3;
   font-weight: 100;
   font-size: 24px;
   font-family: 'Caprasimo';
