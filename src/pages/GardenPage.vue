@@ -108,11 +108,12 @@ function selectCategory(category) {
 }
 .banner-img {
   width: 100%;
-  height: 600px;
+  height: 700px;
   object-fit: cover;
   filter: brightness(85%);
 }
 .banner-text {
+  width: 90%;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -120,11 +121,11 @@ function selectCategory(category) {
   color: white;
 }
 .banner-text h1 {
-  font-size: 3rem;
+  font-size: 96px;
   margin: 0;
 }
 .banner-text h2 {
-  font-size: 2.5rem;
+  font-size: 96px;
   margin: 0;
   font-weight: 700;
 }
@@ -147,7 +148,7 @@ function selectCategory(category) {
 
 /* Floral divider image at the top */
 .floral-divider {
-  background-color: #b3b08f; /* greenish background behind floral line */
+  background-color: #9a9d68; /* greenish background behind floral line */
 }
 .floral-divider img {
   width: 100%;
@@ -157,7 +158,7 @@ function selectCategory(category) {
 
 /* Green background with white oval center */
 .featured-header {
-  background-color: #b3b08f;
+  background-color: #9a9d68;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,9 +169,9 @@ function selectCategory(category) {
 /* The oval shape */
 .featured-oval {
   background-color: #ffffff;
-  width: 400px;
-  height: 120px;
-  border-radius: 50% / 45%;
+  width: 1200px;
+  height: 200px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,10 +179,10 @@ function selectCategory(category) {
 }
 
 .featured-oval h2 {
-  color: #a6849b;
-  font-family: 'Outfit', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
+  color: #b8a0b8;
+  font-family: 'Caprasimo', sans-serif;
+  font-size: 64px;
+  font-weight: 100;
   margin: 0;
 }
 
@@ -192,14 +193,15 @@ function selectCategory(category) {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 /* Cards (white, no radius, with shadow) */
 .flower-card {
   background-color: #ffffff;
-  width: 230px;
-  padding: 1rem;
+  margin: 100px 15px;
+  width: 200px;
+  padding: 1rem 1rem 2rem 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition:
     transform 0.3s ease,
@@ -213,21 +215,21 @@ function selectCategory(category) {
 
 .flower-card img {
   width: 100%;
-  height: 230px;
+  height: 200px;
   object-fit: cover;
 }
 
 .name {
-  color: #5b6239;
-  font-weight: 600;
-  margin: 0.8rem 0 0.3rem;
-  font-size: 1rem;
+  color: #9a9d68;
+  font-weight: 100;
+  margin: 2rem 0 0.3rem;
+  font-size: 18px;
 }
 
 .price {
-  color: #5b6239;
+  color: #9a9d68;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 18px;
 }
 
 /* Category Section */
@@ -243,18 +245,20 @@ function selectCategory(category) {
   margin-bottom: 2rem;
 }
 .category-buttons button {
-  border: 2px solid #b8c0c9;
-  background: none;
-  color: #5b6239;
-  font-weight: 600;
+  border: 5px solid #a8b9c3;
+  background: A8B9C3;
+  color: #9a9d68;
+  font-weight: 100;
+  font-size: 24px;
+  font-family: 'Caprasimo';
   border-radius: 30px;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   transition: 0.3s ease;
 }
 .category-buttons button.active {
-  border-color: #a6849b;
-  color: #a6849b;
+  border-color: #b8a0b8;
+  color: #b8a0b8;
 }
 .category-buttons button:hover {
   transform: scale(1.05);
