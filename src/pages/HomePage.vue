@@ -131,7 +131,7 @@ const goToGarden = () => {
   margin-top: -10px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   font-family: Outfit;
-  font-size: 72px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -139,17 +139,14 @@ const goToGarden = () => {
 
 .hero-left button {
   background-color: #f5f0ec;
-  font-family: 'Cou';
-  color: #4c3a3a;
-  font-size: 1.2rem;
-  border: none;
-  padding: 1.5rem 1rem;
+  padding: 20px 10px;
   cursor: pointer;
+  border: none;
   box-shadow: 12px 13px 4px 0 rgba(0, 0, 0, 0.25);
   color: #9a9d68;
   text-align: center;
   font-family: Caprasimo;
-  font-size: 48px;
+  font-size: 35px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
