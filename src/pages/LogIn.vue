@@ -96,7 +96,7 @@ import loginImage from '@/assets/loginimg.png'
 h2 {
   font-family: 'Caprasimo', cursive;
   font-size: 2.3rem;
-  color: #5b6239;
+  color: #73858f;
   margin-bottom: 28px;
   text-align: left;
 }
@@ -109,7 +109,7 @@ form {
 label {
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
-  color: #5b6239;
+  color: #a8b9c3;
   margin-bottom: 6px;
 }
 
@@ -125,7 +125,7 @@ input {
 
 button {
   font-family: 'Outfit', sans-serif;
-  background-color: #9a9d68;
+  background-color: #a8b9c3;
   color: white;
   font-weight: bold;
   padding: 12px;
@@ -138,14 +138,14 @@ button {
 }
 
 button:hover {
-  background-color: #5b6239;
+  background-color: #6c808c;
 }
 
 .signup-link {
   margin-top: 18px;
   font-size: 0.9rem;
   font-family: 'Outfit', sans-serif;
-  color: #5b6239;
+  color: #6c808c;
   text-align: left;
 }
 
