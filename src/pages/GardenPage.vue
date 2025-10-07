@@ -4,17 +4,15 @@
     <section class="banner">
       <img src="@/assets/banner-flowers.png" alt="Banner Flowers" class="banner-img" />
       <div class="banner-text">
-        <h1>Garden:</h1>
-        <h2>Pick your Flowers</h2>
+        <h1>Garden: Pick Your Flowers</h1>
       </div>
     </section>
-
+    <div class="floral-divider">
+      <img src="@/assets/flower-divider.png" alt="Flower Divider" />
+    </div>
     <!-- Featured Section -->
     <section class="featured">
       <!-- Top Floral Divider -->
-      <div class="floral-divider">
-        <img src="@/assets/flower-divider.png" alt="Flower Divider" />
-      </div>
 
       <!-- Green Background + White Oval with Text -->
       <div class="featured-header">
@@ -108,7 +106,7 @@ function selectCategory(category) {
 }
 .banner-img {
   width: 100%;
-  height: 700px;
+  height: 30%;
   object-fit: cover;
   filter: brightness(85%);
 }
@@ -124,36 +122,31 @@ function selectCategory(category) {
   font-size: 74px;
   margin: 0;
 }
-.banner-text h2 {
-  font-size: 74px;
-  margin: 0;
-  font-weight: 700;
-}
 
 /* === FEATURED SECTION === */
 .banner,
-.floral-divider {
+.floral-divider,
+.featured {
   margin: 0;
   padding: 0;
   display: block;
+  line-height: 0;
 }
 
 .banner-img,
 .floral-divider img {
   display: block;
   width: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
 }
 
 /* Floral divider image at the top */
 .floral-divider {
-  background-color: #9a9d68; /* greenish background behind floral line */
-}
-.floral-divider img {
-  width: 100%;
-  height: auto;
-  display: block;
+  background-color: #9a9d68;
+  border: none;
+  margin-top: -1px; /* ensures no visible line on some displays */
 }
 
 /* Green background with white oval center */
@@ -164,6 +157,7 @@ function selectCategory(category) {
   align-items: center;
   padding: 3rem 0;
   position: relative;
+  margin-top: -1px; /* ensures perfect flush with divider */
 }
 
 /* The oval shape */
@@ -231,6 +225,15 @@ function selectCategory(category) {
   color: #9a9d68;
   font-weight: 700;
   font-size: 18px;
+}
+
+.flower-card {
+  cursor: pointer;
+}
+
+.flower-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Category Section */
