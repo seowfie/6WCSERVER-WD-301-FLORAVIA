@@ -34,6 +34,7 @@
         <h4>QUICK LINKS</h4>
         <router-link to="/">Home</router-link>
         <router-link to="/garden">Garden</router-link>
+        <router-link to="/basket">Basket</router-link>
         <router-link to="/support">Support</router-link>
         <router-link to="/profile">Profile</router-link>
       </div>
