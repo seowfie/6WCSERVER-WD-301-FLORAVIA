@@ -10,6 +10,11 @@
       <div class="hero-right" :style="{ backgroundImage: `url(${heroRight})` }"></div>
     </section>
 
+    <!-- Floral Divider -->
+    <div class="floral-divider">
+      <img src="@/assets/flower-divider.png" alt="Flower Divider" />
+    </div>
+
     <!-- Story Section -->
     <section class="story">
       <div class="story-left"></div>
@@ -23,6 +28,16 @@
         </p>
       </div>
     </section>
+
+    <!-- Featured Oval -->
+    <div class="featured-header">
+      <div class="featured-oval">
+        <p>
+          Whether you’re sending a surprise bouquet or decorating your space, Floravia helps you
+          share love and color, one petal at a time.
+        </p>
+      </div>
+    </div>
 
     <!-- Service Section -->
     <section class="service" id="garden">
@@ -38,74 +53,38 @@
       <div class="service-right"></div>
     </section>
 
-    <!-- Featured Section -->
-    <section class="featured">
-      <!-- Top Floral Divider -->
-      <div class="floral-divider">
-        <img src="@/assets/flower-divider.png" alt="Flower Divider" />
-      </div>
-
-      <!-- Green Background + White Oval with Text -->
-      <div class="featured-header">
-        <div class="featured-oval">
-          <h2>FEATURED</h2>
-        </div>
-      </div>
-    </section>
-    <!-- White Section for Featured Items -->
-    <!-- <div class="featured-items">
-        <div v-for="(flower, index) in featuredFlowers" :key="index" class="flower-card">
-          <img :src="flower.image" :alt="flower.name" />
-          <p class="name">{{ flower.name }}</p>
-          <p class="price">₱{{ flower.price }}</p>
-        </div>
-      </div>
-    </section> -->
-
     <!-- Gallery Section -->
-    <!-- <section class="gallery" id="gallery">
+    <section class="gallery" id="gallery">
       <h2>Gallery</h2>
       <div class="carousel">
         <button @click="prevImage">‹</button>
-        <img :src="images[current]" alt="Bouquet" />
+        <img :src="images[current]" alt="Bouquet" class="carousel-img" />
         <button @click="nextImage">›</button>
       </div>
-    </section> -->
+    </section>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import heroLeft from '@/assets/heroleft.png'
 import heroRight from '@/assets/heroright.png'
 
-// Router for CTA button
+// Gallery images
+const images = [
+  new URL('@/assets/gallery1.jpg', import.meta.url).href,
+  new URL('@/assets/gallery2.jpg', import.meta.url).href,
+  new URL('@/assets/gallery3.jpg', import.meta.url).href,
+  new URL('@/assets/gallery4.jpg', import.meta.url).href,
+]
+
+const current = ref(0)
+const nextImage = () => (current.value = (current.value + 1) % images.length)
+const prevImage = () => (current.value = (current.value - 1 + images.length) % images.length)
+
 const router = useRouter()
-const goToGarden = () => {
-  router.push('/garden') // links to GardenPage.vue
-}
-
-// // Featured flowers example
-// const featuredFlowers = [
-//   { name: 'Rose Bouquet', price: 500, image: require('@/assets/featured1.jpg') },
-//   { name: 'Tulip Mix', price: 350, image: require('@/assets/featured2.jpg') },
-//   { name: 'Sunflower Bundle', price: 400, image: require('@/assets/featured3.jpg') }
-// ]
-
-// // Gallery images
-// const images = [
-//   require('@/assets/gallery1.jpg'),
-//   require('@/assets/gallery2.jpg'),
-//   require('@/assets/gallery3.jpg')
-// ]
-// let current = 0
-
-// const nextImage = () => {
-//   current = (current + 1) % images.length
-// }
-// const prevImage = () => {
-//   current = (current - 1 + images.length) % images.length
-// }
+const goToGarden = () => router.push('/garden')
 </script>
 
 <style>
@@ -115,70 +94,100 @@ const goToGarden = () => {
   min-height: 92vh;
 }
 
-.hero-left {
+.hero-left,
+.hero-right {
   flex: 1;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2%; /* instead of 15rem */
+}
+
+.hero-left {
   color: white;
+  padding: 2%;
 }
 
 .hero-left h1 {
-  color: #f5f0ec;
-  margin-top: -10px;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   font-family: Outfit;
-  font-size: 50px;
-  font-style: normal;
+  font-size: 55px;
   font-weight: 700;
-  line-height: normal;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
 }
 
 .hero-left button {
-  background-color: #f5f0ec;
-  padding: 20px 10px;
-  cursor: pointer;
-  border: none;
-  box-shadow: 12px 13px 4px 0 rgba(0, 0, 0, 0.25);
-  color: #9a9d68;
-  text-align: center;
   font-family: Caprasimo;
   font-size: 35px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  color: #9a9d68;
+  background-color: #f5f0ec;
+  border: none;
+  padding: 20px 10px;
+  cursor: pointer;
+  box-shadow: 12px 13px 4px rgba(0, 0, 0, 0.25);
 }
 
-.hero-right {
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-  padding: 1%; /* instead of 5rem */
-}
 /* Story */
+.floral-divider img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .story {
   display: flex;
-  background-color: #d3bed6;
+  background-color: #b8a0b8;
 }
+
 .story-left {
   flex: 1;
-  background: url('../assets/story.jpg') center/cover no-repeat;
+  background: url('../assets/aboutus.png') center/cover no-repeat;
 }
+
 .story-right {
   flex: 1;
   padding: 4rem;
   color: white;
 }
+
 .story-right h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+  font-family: Caprasimo;
+  font-size: 64px;
+  text-align: center;
 }
+
 .story-right p {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-family: Outfit;
+  font-size: 24px;
+  padding: 50px;
+  text-align: justify;
+}
+
+/* Featured Oval */
+.featured-header {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.featured-oval {
+  background-color: #f5f0ec;
+  width: 1000px;
+  height: 220px;
+  border-radius: 50%;
+  border: 4px solid #9a9d68;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-oval p {
+  font-family: Outfit;
+  font-size: 25px;
+  text-align: center;
+  color: #9a9d68;
+  padding: 20px 100px;
 }
 
 /* Service */
@@ -187,69 +196,60 @@ const goToGarden = () => {
   background-color: #a9ac8c;
   color: white;
 }
+
 .service-left {
   flex: 1;
   padding: 4rem;
 }
-.service-left h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-}
 
-/* Featured */
-.featured {
-  background-color: #fff;
-  padding: 3rem 0;
+.service-left h2 {
+  font-family: Caprasimo;
+  font-size: 64px;
   text-align: center;
 }
-.featured-header .featured-oval {
-  display: inline-block;
-  background-color: white;
-  border-radius: 50%;
-  padding: 2rem 3rem;
-  margin-bottom: 2rem;
+
+.service-left p {
+  font-family: Outfit;
+  font-size: 24px;
+  padding: 50px;
+  text-align: justify;
 }
-.featured-items {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-.flower-card img {
-  width: 200px;
-  border-radius: 12px;
-}
-.flower-card .name {
-  font-weight: bold;
-  margin-top: 0.5rem;
-}
-.flower-card .price {
-  color: #5b6239;
+
+.service-right {
+  flex: 1;
+  background: url('../assets/service.png') center/cover no-repeat;
 }
 
 /* Gallery */
 .gallery {
   text-align: center;
-  background-color: #a7b4b8;
-  padding: 3rem 0;
-}
-.gallery h2 {
-  font-size: 2rem;
+  padding: 3rem 1rem;
+  background-image: url('@/assets/gallerybg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
-  margin-bottom: 2rem;
 }
+
+.gallery h2 {
+  font-family: Caprasimo;
+  font-size: 64px;
+}
+
 .carousel {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
+
 .carousel img {
-  width: 400px;
-  height: auto;
+  width: 350px;
+  max-width: 80vw;
   border-radius: 12px;
+  transition: transform 0.3s ease;
 }
+
 .carousel button {
   background: none;
   border: none;
@@ -266,19 +266,9 @@ const goToGarden = () => {
   .service {
     flex-direction: column;
   }
-  .hero-left,
-  .hero-right,
-  .story-left,
-  .story-right,
-  .service-left,
-  .service-right {
-    width: 100%;
-  }
   .carousel img {
-    width: 300px;
-  }
-  .flower-card img {
-    width: 150px;
+    width: 250px;
   }
 }
 </style>
+
