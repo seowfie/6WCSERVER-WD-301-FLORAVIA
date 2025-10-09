@@ -253,7 +253,7 @@ const goToGarden = () => router.push('/garden')
 .carousel button {
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 6rem;
   color: white;
   cursor: pointer;
   padding: 1rem;
