@@ -12,6 +12,7 @@ import Basket from '../pages/BasketPage.vue'
 import HomeAdmin from '../pages/HomeAdmin.vue'
 import Edit from '../pages/EditAdmin.vue'
 import Create from '../pages/CreateAdmin.vue'
+import Pending from '@/pages/PendingAdmin.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,8 +31,8 @@ const router = createRouter({
     { path: '/admin/dashboard', component: HomeAdmin },
     { path: '/admin/edit', component: Edit },
     { path: '/admin/create', component: Create },
+    { path: '/admin/pending', component: Pending },
   ],
 })
 
 export default router
-
