@@ -6,7 +6,7 @@ import Signup from '../pages/SignUp.vue'
 import Profile from '../pages/ProfileUser.vue'
 import SingleProduct from '../pages/SingleProduct.vue'
 import CheckOut from '../pages/CheckOut.vue'
-import Cart from '../pages/CartPage.vue'
+import Basket from '../pages/BasketPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,7 +18,7 @@ const router = createRouter({
     { path: '/profile', component: Profile },
     { path: '/singleproduct', component: SingleProduct },
     { path: '/checkout', component: CheckOut },
-    { path: '/cart', component: Cart },
+    { path: '/basket', component: Basket },
   ],
 })
 
