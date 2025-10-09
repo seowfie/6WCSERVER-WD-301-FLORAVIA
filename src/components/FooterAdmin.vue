@@ -32,10 +32,10 @@
       <!-- Quick Links -->
       <div class="footer-links">
         <h4>QUICK LINKS</h4>
-        <router-link to="/">Home</router-link>
+        <router-link to="/admin/home">Home</router-link>
         <router-link to="/admin/pending">Pending</router-link>
         <router-link to="/admin/create">Create</router-link>
-        <router-link to="/admin/edit">Modify</router-link>
+        <router-link to="/admin/modify">Modify</router-link>
       </div>
 
       <!-- Social Links -->
