@@ -336,6 +336,7 @@ input {
 
 /* Cancel Button */
 .cancel-btn {
+  font-family: 'Outfit', sans-serif;
   background-color: #9a9d68;
   color: #fff;
   border: none;
