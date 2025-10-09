@@ -115,22 +115,20 @@ const filteredOrders = computed(() =>
 
 .featured-oval {
   background-color: #ffffff;
-  width: 90%;
-  max-width: 1200px;
+  width: 80%;
+  max-width: 1000px;
   height: 150px;
   border-radius: 50%;
   border: 4px solid #9a9d68;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .featured-oval h2 {
   color: #9a9d68;
   font-family: 'Caprasimo', sans-serif;
-  font-size: 48px;
-  font-weight: 100;
+  font-size: 42px;
   margin: 0;
 }
 
@@ -202,11 +200,11 @@ const filteredOrders = computed(() =>
 
 /* 🌷 Dropdown appearance */
 .status-dropdown {
+  text-align: center;
   width: 100%;
   background-color: #b8a0b8; /* purple */
   color: white;
   border: none;
-  border-radius: 6px;
   padding: 10px 16px;
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
