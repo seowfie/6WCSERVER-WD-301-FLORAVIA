@@ -16,7 +16,7 @@
     <!-- Right side -->
     <div class="nav-right">
       <router-link to="/admin/create">CREATE</router-link>
-      <router-link to="/admin/modify">MODIFY</router-link>
+      <router-link to="/admin/edit">MODIFY</router-link>
     </div>
   </nav>
 </template>
