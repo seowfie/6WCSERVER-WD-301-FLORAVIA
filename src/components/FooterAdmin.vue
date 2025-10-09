@@ -33,10 +33,9 @@
       <div class="footer-links">
         <h4>QUICK LINKS</h4>
         <router-link to="/">Home</router-link>
-        <router-link to="/garden">Garden</router-link>
-        <router-link to="/basket">Basket</router-link>
-        <router-link to="/support">Support</router-link>
-        <router-link to="/profile">Profile</router-link>
+        <router-link to="/admin/pending">Pending</router-link>
+        <router-link to="/admin/create">Create</router-link>
+        <router-link to="/admin/edit">Modify</router-link>
       </div>
 
       <!-- Social Links -->
@@ -65,9 +64,9 @@
 import logo from '@/assets/floravia_logo.png'
 
 // Contact vectors
-import locationIcon from '@/assets/vectors/Location.png'
-import phoneIcon from '@/assets/vectors/Phone.png'
-import emailIcon from '@/assets/vectors/Email.png'
+import locationIcon from '@/assets/vectors/Location-admin.png'
+import phoneIcon from '@/assets/vectors/Phone-admin.png'
+import emailIcon from '@/assets/vectors/Email-admin.png'
 
 // Social vectors
 import facebookIcon from '@/assets/vectors/facebook.png'
@@ -76,9 +75,9 @@ import tiktokIcon from '@/assets/vectors/tiktok.png'
 import emailconIcon from '@/assets/vectors/Email_Connect.png'
 </script>
 
-<style>
+<style scoped>
 .footer {
-  background-color: #b8a0b8;
+  background-color: #9a9d68;
   color: #f9efe6;
   padding: 2rem 3rem;
   font-family: 'Outfit', sans-serif;
@@ -88,7 +87,7 @@ import emailconIcon from '@/assets/vectors/Email_Connect.png'
 }
 
 h4 {
-  color: #5b6239;
+  color: #f8d2bb;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 1rem;
