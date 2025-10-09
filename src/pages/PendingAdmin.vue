@@ -138,7 +138,7 @@ const filteredOrders = computed(() =>
 .status-section {
   background-color: #f5f0ec;
   padding: 60px 20px;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
