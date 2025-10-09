@@ -28,8 +28,8 @@ const router = createRouter({
     { path: '/basket', component: Basket },
 
     // Admin Routes
-    { path: '/admin/dashboard', component: HomeAdmin },
-    { path: '/admin/edit', component: Edit },
+    { path: '/admin/home', component: HomeAdmin },
+    { path: '/admin/modify', component: Modify },
     { path: '/admin/create', component: Create },
     { path: '/admin/pending', component: Pending },
   ],
