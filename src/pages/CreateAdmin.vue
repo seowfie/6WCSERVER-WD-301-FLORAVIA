@@ -231,11 +231,11 @@ export default {
 
 /* 🌿 Add Button */
 .add-btn {
+  font-family: 'Outfit', sans-serif;
   margin-top: 1rem;
   background-color: #9a9d68;
   color: #f5f0ec;
   border: none;
-  border-radius: 6px;
   padding: 0.8rem 0;
   font-weight: 700;
   font-size: 18px;
@@ -246,7 +246,7 @@ export default {
 
 .add-btn:hover {
   background-color: #b8a0b8;
-  transform: translateY(-3px);
+  transform: scale(1.05);
 }
 
 /* 📱 Responsive */
