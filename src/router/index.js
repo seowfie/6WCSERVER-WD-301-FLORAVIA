@@ -8,9 +8,14 @@ import SingleProduct from '../pages/SingleProduct.vue'
 import CheckOut from '../pages/CheckOut.vue'
 import Basket from '../pages/BasketPage.vue'
 
+// Admin Imports
+import HomeAdmin from '../pages/HomeAdmin.vue'
+import Edit from '../pages/EditAdmin.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    // User Routes
     { path: '/', component: Home },
     { path: '/garden', component: Garden },
     { path: '/login', component: Login },
@@ -19,6 +24,10 @@ const router = createRouter({
     { path: '/singleproduct', component: SingleProduct },
     { path: '/checkout', component: CheckOut },
     { path: '/basket', component: Basket },
+
+    // Admin Routes
+    { path: '/admin/dashboard', component: HomeAdmin },
+    { path: '/admin/edit', component: Edit },
   ],
 })
 
