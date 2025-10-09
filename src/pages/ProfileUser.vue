@@ -164,6 +164,7 @@ const filteredOrders = computed(() => orders.value.filter((o) => o.status === se
 }
 
 .logout-btn {
+  font-family: 'Outfit', sans-serif;
   background-color: #9a9d68;
   color: white;
   border: none;
@@ -217,11 +218,12 @@ input {
 
 /* Larger SAVE Button */
 .save-btn {
+  font-family: 'Outfit', sans-serif;
   background-color: #f8d2bb;
   color: #5b6239;
   border: none;
   padding: 12px 32px;
-  font-weight: 600;
+  font-weight: 800;
   cursor: pointer;
   font-size: 1rem;
 }
