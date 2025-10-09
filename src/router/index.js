@@ -10,7 +10,7 @@ import Basket from '../pages/BasketPage.vue'
 
 // Admin Imports
 import HomeAdmin from '../pages/HomeAdmin.vue'
-import Edit from '../pages/EditAdmin.vue'
+import Modify from '../pages/ModifyAdmin.vue'
 import Create from '../pages/CreateAdmin.vue'
 import Pending from '@/pages/PendingAdmin.vue'
 
