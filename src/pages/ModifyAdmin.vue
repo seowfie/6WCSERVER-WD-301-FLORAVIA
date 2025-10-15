@@ -18,7 +18,6 @@
               <th>PRICE</th>
               <th>QUANTITY</th>
               <th></th>
-              <th></th>
             </tr>
           </thead>
 
@@ -34,14 +33,6 @@
                   alt="Edit"
                   class="icon edit-icon"
                   @click="editProduct(product.id)"
-                />
-              </td>
-              <td>
-                <img
-                  src="@/assets/vectors/delete-icon.png"
-                  alt="Delete"
-                  class="icon delete-icon"
-                  @click="deleteProduct(product.id)"
                 />
               </td>
             </tr>
@@ -68,9 +59,6 @@ export default {
     editProduct(id) {
       console.log('Edit product:', id)
     },
-    deleteProduct(id) {
-      console.log('Delete product:', id)
-    },
   },
 }
 </script>
@@ -86,7 +74,7 @@ export default {
   font-family: 'Outfit', sans-serif;
 }
 
-/* Oval Header (same as Create page) */
+/* Oval Header */
 .featured-header {
   background-color: #f8d2bb;
   display: flex;
@@ -161,7 +149,7 @@ export default {
   text-align: center;
 }
 
-/* 🛠️ Icons */
+/* Icons */
 .icon {
   width: 24px;
   height: 24px;
@@ -176,20 +164,20 @@ export default {
   opacity: 0.8;
 }
 
+/* Adjust column widths */
+
 .modify-table th:nth-child(4),
 .modify-table td:nth-child(4) {
   width: 150px;
 }
 
 .modify-table th:nth-child(5),
-.modify-table td:nth-child(5),
-.modify-table th:nth-child(6),
-.modify-table td:nth-child(6) {
+.modify-table td:nth-child(5) {
   width: 100px;
   padding: 0.5rem;
 }
 
-/* 📱 Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .featured-oval {
     width: 90%;
