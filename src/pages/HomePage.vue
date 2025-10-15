@@ -44,10 +44,7 @@
       <div class="service-left">
         <h2>Service</h2>
         <p>
-          Welcome to Floravia, your go-to online flower shop for every occasion. We believe flowers
-          have the power to brighten any moment, from heartfelt celebrations to simple everyday
-          gestures. Our goal is to make it easy for anyone to browse, customize, and order blooms
-          with just a few clicks.
+          At Floravia, we make every moment bloom with ease and elegance. We offer same-day and scheduled delivery, custom flower arrangements, and themed collections for birthdays, romance, congratulations, and sympathy. Add a personal touch with gifts like chocolates, cards, or plushies, or enjoy the beauty of fresh flowers regularly through our subscription service. We also cater to corporate and event orders, ensuring every bouquet leaves a lasting impression.
         </p>
       </div>
       <div class="service-right"></div>
