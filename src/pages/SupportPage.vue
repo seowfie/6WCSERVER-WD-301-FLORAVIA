@@ -111,7 +111,7 @@
 <script setup>
 import { ref } from 'vue'
 
-// ✅ Form Handling
+/* ✅ Email Form Logic */
 const form = ref({
   firstName: '',
   lastName: '',
@@ -132,7 +132,7 @@ const handleSubmit = () => {
   }
 }
 
-// ✅ FAQ Dropdown Logic
+/* ✅ FAQ Logic */
 const activeFAQ = ref(null)
 const toggleFAQ = (index) => {
   activeFAQ.value = activeFAQ.value === index ? null : index
@@ -176,6 +176,7 @@ const faqs = [
 .support-page {
   font-family: 'Outfit', sans-serif;
   background-color: #f5f0ec;
+  overflow-x: hidden; /* ✅ no horizontal overflow */
 }
 
 /* 🌸 Hero Section */
@@ -185,16 +186,19 @@ const faqs = [
   background-size: cover;
   background-position: center;
   width: 100%;
-  padding: 6rem 3rem;
+  min-height: 90%;
   display: flex;
   justify-content: center;
+  padding: 4rem 1.5rem;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .support-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 45%;
   height: 100%;
   background-color: rgba(245, 240, 236, 0.7);
   backdrop-filter: blur(6px);
@@ -206,21 +210,23 @@ const faqs = [
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1100px;
   width: 100%;
-  gap: 3rem;
+  gap: 2rem;
   z-index: 2;
+  flex-wrap: wrap;
 }
 
 .support-text {
-  width: 45%;
-  margin-left: -3rem;
+  flex: 1;
+  max-width: 440px;
   color: #333;
+  z-index: 2;
 }
 
 .support-text h1 {
   font-family: 'Caprasimo', cursive;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   color: #5b6239;
   margin-bottom: 1rem;
 }
@@ -237,28 +243,27 @@ const faqs = [
   gap: 1rem;
 }
 
-.support-info h4 {
-  font-family: 'Caprasimo', cursive;
-  color: #9a9d68;
-}
-
-/* ✉️ Email Form */
+/* ✉️ Email Box */
 .email-box {
   background-color: #f5f0ec;
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  width: 42%;
+  flex: 1;
+  min-width: 320px;
+  max-width: 420px;
+  z-index: 2;
 }
 
 .email-box h2 {
   font-family: 'Caprasimo', cursive;
-  color: #9a9d68;
-  margin-bottom: 1.5rem;
+  color: #5b6239;
+  margin-bottom: 1.2rem;
 }
 
 .name-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -282,6 +287,8 @@ textarea {
   border-radius: 8px;
   padding: 0.6rem;
   font-family: 'Outfit', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 textarea {
@@ -289,7 +296,7 @@ textarea {
 }
 
 .send-btn {
-  background-color: #f8d2bb;
+  background-color: #5b6239;
   color: white;
   border: none;
   border-radius: 8px;
@@ -297,6 +304,7 @@ textarea {
   font-weight: 700;
   cursor: pointer;
   transition: 0.3s;
+  width: 100%;
 }
 
 .send-btn:hover {
@@ -307,13 +315,15 @@ textarea {
 .map-section iframe {
   width: 100%;
   height: 520px;
+  border: none;
+  display: block;
 }
 
 /* 🌿 Featured Oval */
 .featured-header {
   background-color: #a8b9c3;
   width: 100%;
-  padding: 80px 0;
+  padding: 60px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,7 +332,7 @@ textarea {
 .featured-oval {
   background-color: #f5f0ec;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   border: 4px solid #f8d2bb;
   display: flex;
   justify-content: center;
@@ -332,14 +342,15 @@ textarea {
 .featured-oval h2 {
   color: #f8d2bb;
   font-family: 'Caprasimo', cursive;
-  font-size: 48px;
+  font-size: 42px;
+  text-align: center;
 }
 
 /* 💬 FAQ */
 .faq-section {
   background-color: #f5f0ec;
   padding: 4rem 2rem;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -389,5 +400,23 @@ textarea {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .support-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .support-overlay {
+    width: 100%;
+  }
+
+  .support-text,
+  .email-box {
+    max-width: 90%;
+  }
 }
 </style>
