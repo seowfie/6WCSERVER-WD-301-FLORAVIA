@@ -7,6 +7,7 @@ import Profile from '../pages/ProfileUser.vue'
 import SingleProduct from '../pages/SingleProduct.vue'
 import CheckOut from '../pages/CheckOut.vue'
 import Basket from '../pages/BasketPage.vue'
+import Support from '../pages/SupportPage.vue'
 
 // Admin Imports
 import HomeAdmin from '../pages/HomeAdmin.vue'
@@ -26,6 +27,7 @@ const router = createRouter({
     { path: '/singleproduct', component: SingleProduct },
     { path: '/checkout', component: CheckOut },
     { path: '/basket', component: Basket },
+    { path: '/support', component: Support },
 
     // Admin Routes
     { path: '/admin/home', component: HomeAdmin },
