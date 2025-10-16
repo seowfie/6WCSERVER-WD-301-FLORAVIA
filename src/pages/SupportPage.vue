@@ -160,9 +160,9 @@ const faqs = [
       'Yes, you’ll need to create an account to complete your purchase. This helps us track your orders, update you on delivery progress, and provide a smoother experience.',
   },
   {
-    question: 'What other payment methods do you accept?',
+    question: 'How can I contact Floravia for assistance?',
     answer:
-      'Floravia accepts secure payments such as credit/debit cards, GCash, and bank transfers. All payment details are encrypted for safety.',
+      'You can reach us anytime through our mobile number, email, or official social media pages. Our team will be happy to assist you with any inquiries or concerns.',
   },
   {
     question: 'How can I track my order status?',
