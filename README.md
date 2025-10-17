@@ -6,6 +6,10 @@ A MEVN Stack Web Application
 Final Project for WEBCSERVER and ADDBASE
 AY 2025–2026, 1st Semester
 
+⚠️ Important Note
+Due to GitHub’s file size restrictions, some dependencies are not included in the uploaded repository.
+Please install all required dependencies individually using the commands below to ensure the application runs properly.
+
 📖 Overview
 
 Floravia is a full-stack flower shop web application that enables customers to browse, order, and pay for floral products online.
