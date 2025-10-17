@@ -82,6 +82,7 @@ Then install dependencies:
 - npm install @vitejs/plugin-vue
 
 - After all the dependencies are installed, put them under frontend/ and delete temp folder
+
 Run the development server:
 npm run dev
 
