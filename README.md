@@ -32,31 +32,7 @@ Admin Side: For managing products, inventory, and customer orders.
 - Access dashboard overview for quick management
 
 🗂️ Project Structure
-6WCSERVER-WD-301-FLORAVIA/
-│
-├── backend/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   │   ├── basketRoutes.js
-│   │   ├── orderRoutes.js
-│   │   ├── productRoutes.js
-│   │   └── userRoutes.js
-│   ├── seed/
-│   │   └── seedProducts.js
-│   ├── server.js
-│   ├── package.json
-│   └── .env
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   ├── index.html
-│   ├── vite.config.js
-│   └── package.json
-│
-└── README.md
+View Here: https://drive.google.com/file/d/1Jg5ST0d3HzxwnADuXj24VUP2S8fjtBeN/view?usp=sharing
 
 ⚙️ Installation & Setup
 1. Clone the Repository
