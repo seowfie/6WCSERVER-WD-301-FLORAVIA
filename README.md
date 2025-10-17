@@ -50,10 +50,8 @@ git clone [https://github.com/YOUR-USERNAME/6WCSERVER-WD-301-FLORAVIA.git](https
 
 
 Run the backend server:
-- node server.js
-
+node server.js
 or
-
 npx nodemon server.js
 
 3. Frontend Setup
