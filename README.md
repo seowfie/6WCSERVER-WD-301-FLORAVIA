@@ -40,18 +40,20 @@ View Here: https://drive.google.com/file/d/1Jg5ST0d3HzxwnADuXj24VUP2S8fjtBeN/vie
 # ⚙️ Installation & Setup
 1. Clone the Repository
 git clone [https://github.com/YOUR-USERNAME/6WCSERVER-WD-301-FLORAVIA.git](https://github.com/seowfie/6WCSERVER-WD-301-FLORAVIA.git)
-then go to cmd and type: cd 6WCSERVER-WD-301-FLORAVIA
+- then go to cmd and type: cd 6WCSERVER-WD-301-FLORAVIA
 
-2. Backend Setup
-cd backend
-npm init -y
-npm install express mongoose cors dotenv
-npm install nodemon --save-dev
+3. Backend Setup
+- cd backend
+- npm init -y
+- npm install express mongoose cors dotenv
+- npm install nodemon --save-dev
 
 
 Run the backend server:
-node server.js
+- node server.js
+
 or
+
 npx nodemon server.js
 
 3. Frontend Setup
