@@ -59,7 +59,8 @@ npx nodemon server.js
 - Open a new terminal and navigate to the frontend folder:
 -   cd frontend
 -   (optional) create a temp folder for setup
--   mkdir temp && cd temp
+-   mkdir temp
+-   cd temp
 -   npm init vue@latest
 
 
