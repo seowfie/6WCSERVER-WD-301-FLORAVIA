@@ -55,43 +55,43 @@ or
 npx nodemon server.js
 
 3. Frontend Setup
-Open a new terminal and navigate to the frontend folder:
-cd frontend
-(optional) create a temp folder for setup
-mkdir temp && cd temp
-npm init vue@latest
+- Open a new terminal and navigate to the frontend folder:
+-   cd frontend
+-   (optional) create a temp folder for setup
+-   mkdir temp && cd temp
+-   npm init vue@latest
 
 
 Follow the prompts:
-• Project name → my-mevn-frontend
-• Add TypeScript? → No
-• Add JSX Support? → No
-• Add Vue Router? → Yes
-• Add Pinia for state management? → Yes
-• Add Vitest for testing? → No
-• Add ESLint? → Yes
-• Add Prettier? → Yes
+- Project name → my-mevn-frontend
+- Add TypeScript? → No
+- Add JSX Support? → No
+- Add Vue Router? → Yes
+- Add Pinia for state management? → Yes
+- Add Vitest for testing? → No
+- Add ESLint? → Yes
+- Add Prettier? → Yes
 
 Then install dependencies:
-npm install
-npm install axios
-npm install @vitejs/plugin-vue
+- npm install
+- npm install axios
+- npm install @vitejs/plugin-vue
 
 Run the development server:
 npm run dev
 
 # 👤 Admin Credentials
 To access the Admin Dashboard, use the following credentials:
-email: cedricluis18@gmail.com
-password: cedielord
+- email: cedricluis18@gmail.com
+- password: cedielord
 
 ⚠️ Note: For security reasons, these credentials are for testing and demonstration only.
 
 # 🧠 Technologies Used
-Frontend	Vue.js, Vite, Pinia, Axios
-Backend	Node.js, Express.js
-Database	MongoDB
-Tools	ESLint, Prettier, dotenv, nodemon
+- Frontend	Vue.js, Vite, Pinia, Axios
+- Backend	Node.js, Express.js
+- Database	MongoDB
+- Tools	ESLint, Prettier, dotenv, nodemon
 
 # 👩‍💻 Team Members and Roles
 Member	Responsibilities
