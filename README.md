@@ -79,7 +79,7 @@ Then install dependencies:
 - npm install
 - npm run format
 - npm install axios
-- npm install vite-plugin-vue-devtools --save-dev
+- npm install vite-plugin-vue-devtools@7 --save-dev
 - npm install @vitejs/plugin-vue
 
 - After all the dependencies are installed, put them under frontend/ and delete temp folder
