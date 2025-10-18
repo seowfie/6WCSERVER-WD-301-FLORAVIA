@@ -101,6 +101,7 @@ To access the Admin Dashboard, use the following credentials:
 
 # 👩‍💻 Team Members and Roles
 Member	Responsibilities
+
 Curley, Adrian D.	
 - UI/UX / Frontend Developer
 - Designs user interface and system layout using Vue.js; ensures responsiveness and user-friendly experience
@@ -118,7 +119,7 @@ Sanchez, Katherine G.
 - Tests system functionalities, identifies bugs, and ensures all features are working before deployment
   
 Sarmiento, Sofia Anne T.	
--Project Manager / UI/UX / Frontend Developer	
+- Project Manager / UI/UX / Frontend Developer	
 - Oversees project workflow, ensures design and development consistency, manages documentation and presentation
 
 
