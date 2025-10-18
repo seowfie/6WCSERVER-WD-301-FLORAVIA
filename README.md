@@ -48,6 +48,7 @@ git clone [https://github.com/YOUR-USERNAME/6WCSERVER-WD-301-FLORAVIA.git](https
 - npm install express mongoose cors dotenv
 - npm install nodemon --save-dev
 - npm install jsonwebtoken
+- npm install bcryptjs
 
 
 Run the backend server:
