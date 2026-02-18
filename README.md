@@ -39,7 +39,7 @@ View Here: https://drive.google.com/file/d/1Jg5ST0d3HzxwnADuXj24VUP2S8fjtBeN/vie
 
 # ⚙️ Installation & Setup
 1. Clone the Repository
-git clone [https://github.com/YOUR-USERNAME/6WCSERVER-WD-301-FLORAVIA.git](https://github.com/seowfie/6WCSERVER-WD-301-FLORAVIA.git)
+git clone [https://github.com/seowfie/6WCSERVER-WD-301-FLORAVIA.git](https://github.com/seowfie/6WCSERVER-WD-301-FLORAVIA.git)
 - then go to cmd and type: cd 6WCSERVER-WD-301-FLORAVIA
 
 3. Backend Setup
