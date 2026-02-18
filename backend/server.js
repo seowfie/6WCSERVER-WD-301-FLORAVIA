@@ -14,12 +14,14 @@ dotenv.config();
 const app = express();
 
 // ✅ Allow requests from your frontend (Vite)
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-  })
-);
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://6-wcserver-wd-301-floravia-3gl1.vercel.app", // Your specific Vercel link
+    "https://6-wcserver-wd-301-floravia-3gl1-dbx9fvdoo.vercel.app" // Your other Vercel link
+  ],
+  credentials: true
+}));
 
 app.use(express.json());
 
@@ -53,3 +55,4 @@ mongoose
     console.error("❌ MongoDB connection error:", err);
     process.exit(1);
   });
+
