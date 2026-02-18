@@ -1,6 +1,5 @@
 <template>
   <div class="garden-page">
-    <!-- 🌸 Banner Section -->
     <section class="banner">
       <img src="@/assets/banner-flowers.png" alt="Banner Flowers" class="banner-img" />
       <div class="banner-text">
@@ -8,12 +7,10 @@
       </div>
     </section>
 
-    <!-- 🌸 Floral Divider -->
     <div class="floral-divider">
       <img src="@/assets/flower-divider.png" alt="Flower Divider" />
     </div>
 
-    <!-- 🌿 Featured Section -->
     <section class="featured">
       <div class="featured-header">
         <div class="featured-oval">
@@ -51,7 +48,6 @@
       </div>
     </section>
 
-    <!-- 🌼 Category Section -->
     <section class="categories">
       <div class="category-buttons">
         <button
@@ -103,6 +99,32 @@ import api from '@/api'
 
 const router = useRouter()
 
+// 🌸 Database data
+const flowers = ref([])
+const featuredFlowers = ref([])
+const categories = ref(['Birthday', 'Romance', 'Congratulation', 'Sympathy'])
+const selectedCategory = ref('Birthday')
+
+// 🌻 SAFE Image Resolver (Fixes Build Errors)
+function resolveImage(imagePath) {
+  // 1. If image is missing, return a public internet placeholder
+  if (!imagePath) return "https://placehold.co/400?text=No+Image";
+
+  // 2. Handle Backend Uploads
+  if (imagePath.startsWith("/uploads/")) {
+    return `${import.meta.env.VITE_API_BASE_URL}${imagePath}`;
+  }
+
+  // 3. Handle External Links
+  if (imagePath.startsWith("http")) {
+    return imagePath;
+  }
+
+  // 4. Handle Local Assets (Clean path for public folder)
+  const clean = imagePath.replace(/^.*[\\\/]/, ''); // Extracts just filename
+  return `/${clean}`;
+}
+
 function goToProduct(flower) {
   router.push({
     path: "/singleproduct",
@@ -138,37 +160,6 @@ async function addToBasket(flower) {
     const msg = error.response?.data?.message || "Failed to add item to basket.";
     alert(`❌ ${msg}`);
   }
-}
-
-// 🌸 Database-driven data only (no hardcoded flowers)
-const flowers = ref([])
-const featuredFlowers = ref([])
-const categories = ref(['Birthday', 'Romance', 'Congratulation', 'Sympathy'])
-const selectedCategory = ref('Birthday')
-
-// 🌻 Safe Image Resolver
-function resolveImage(imagePath) {
-  // 1. Use a public internet link for the placeholder (Stops build errors)
-  if (!imagePath) return "https://placehold.co/400?text=No+Image";
-
-  // 2. Handle Backend Uploads (Connects to Render)
-  if (imagePath.startsWith("/uploads/")) {
-    return `${import.meta.env.VITE_API_BASE_URL}${imagePath}`;
-  }
-
-  // 3. Handle External Links (Already valid)
-  if (imagePath.startsWith("http")) {
-    return imagePath;
-  }
-
-  // 4. Handle Local Assets (The Fix)
-  // Clean the path to remove leading slashes
-  const clean = imagePath.replace(/^\/+/, "");
-
-  // ⚠️ CRITICAL: You cannot use `new URL` with variables in production easily.
-  // Ideally, move your static images (like 'gallery1.jpg') to the "public" folder.
-  // If they are in "public", you can just return the path directly:
-  return `/${clean}`;
 }
 
 // 🌺 Load flowers from DB
@@ -403,3 +394,4 @@ function selectCategory(category) {
   gap: 3rem;
 }
 </style>
+
