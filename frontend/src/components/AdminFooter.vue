@@ -70,9 +70,9 @@ import phoneIcon from '@/assets/vectors/Phone-admin.png'
 import emailIcon from '@/assets/vectors/Email-admin.png'
 
 // Social vectors
-import facebookIcon from '@/assets/vectors/facebook.png'
-import instagramIcon from '@/assets/vectors/instagram.png'
-import tiktokIcon from '@/assets/vectors/tiktok.png'
+import facebookIcon from '@/assets/vectors/Facebook.png'
+import instagramIcon from '@/assets/vectors/Instagram.png'
+import tiktokIcon from '@/assets/vectors/Tiktok.png'
 import emailconIcon from '@/assets/vectors/Email_Connect.png'
 </script>
 
