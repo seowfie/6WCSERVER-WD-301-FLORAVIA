@@ -182,7 +182,6 @@ const faqs = [
 /* 🌸 Hero Section */
 .support-hero {
   position: relative;
-  background-image: url('@/assets/supportbg.png');
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -419,4 +418,5 @@ textarea {
     max-width: 90%;
   }
 }
+
 </style>
