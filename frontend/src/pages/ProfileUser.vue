@@ -179,7 +179,6 @@ const logout = () => {
 /* 🌼 Profile Section */
 .profile-section {
   width: 100%;
-  background-image: url("@/assets/profilebg.png");
   background-size: cover;
   background-position: center;
   padding: 60px 20px;
