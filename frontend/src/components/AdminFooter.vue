@@ -72,7 +72,7 @@ import emailIcon from '@/assets/vectors/Email-admin.png'
 // Social vectors
 import facebookIcon from '@/assets/vectors/Facebook.png'
 import instagramIcon from '@/assets/vectors/Instagram.png'
-import tiktokIcon from '@/assets/vectors/Tiktok.png'
+import tiktokIcon from '@/assets/vectors/TikTok.png'
 import emailconIcon from '@/assets/vectors/Email_Connect.png'
 </script>
 
@@ -175,3 +175,4 @@ h4 {
   }
 }
 </style>
+
