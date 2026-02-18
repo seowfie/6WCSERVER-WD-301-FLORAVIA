@@ -89,8 +89,8 @@
 
 <script setup>
 import { ref, computed, onMounted } from "vue";
-import api from "@/api";
 import { useRouter } from "vue-router";
+import api from "@/api";
 import profileIcon from "@/assets/profile.png";
 
 const router = useRouter();
@@ -102,10 +102,16 @@ const selectedStatus = ref("PENDING");
 
 // 🖼️ Image helper
 function getImageUrl(path) {
-  if (!path) return new URL("@/assets/placeholder.jpg", import.meta.url).href;
+
   const clean = String(path).trim();
+
+  // Connect to Render Backend
   if (clean.startsWith("/uploads/")) return `${import.meta.env.VITE_API_BASE_URL}${clean}`;
+
+  // External Links
   if (clean.startsWith("http")) return clean;
+
+  // Local Assets (Dynamic)
   return new URL(`../assets/${clean}`, import.meta.url).href;
 }
 
@@ -118,16 +124,20 @@ onMounted(async () => {
 
   try {
     const userId = user.value._id;
+    // ✅ Now "api" is defined, so this will work!
     const res = await api.get(`/api/orders/my?userId=${userId}`);
     console.log("✅ Raw user orders:", res.data);
     orders.value = res.data;
   } catch (err) {
     console.error("❌ Error loading orders:", err);
-    alert("Failed to load orders. Please try again later.");
+    // Optional: Only show alert if it's not a 404 (no orders yet)
+    if (err.response && err.response.status !== 404) {
+        alert("Failed to load orders.");
+    }
   }
 });
 
-// ✅ Filter by selected status (from order.details.status)
+// ✅ Filter by selected status
 const filteredOrders = computed(() =>
   orders.value.filter(
     (o) =>
