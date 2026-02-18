@@ -65,7 +65,7 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
 import { useRouter } from "vue-router";
-import axios from "axios";
+import api from "@/api";
 
 const router = useRouter();
 const basket = ref([]);
@@ -78,7 +78,7 @@ function getImageUrl(path) {
 
   // ✅ Case 1: Backend upload (e.g. "/uploads/products/flower.png")
   if (path.startsWith("/uploads/")) {
-    return `http://localhost:3000${path}`;
+    return `${import.meta.env.VITE_API_BASE_URL}${path}`;
   }
 
   // ✅ Case 2: Already a full URL
@@ -112,7 +112,7 @@ onMounted(async () => {
       return;
     }
 
-    const res = await axios.get(`http://localhost:3000/api/basket/${user._id}`);
+    const res = await api.get(`/api/basket/${user._id}`);
     basket.value = res.data;
     console.log("✅ Basket loaded:", basket.value);
   } catch (err) {
@@ -142,7 +142,7 @@ async function decreaseQty(item) {
 async function updateQuantity(item) {
   try {
     // ✅ Use PATCH to update the quantity of this specific basket item
-    await axios.patch(`http://localhost:3000/api/basket/${item._id}`, {
+    await api.patch(`/api/basket/${item._id}`, {
       quantity: item.quantity,
     });
   } catch (err) {
@@ -152,7 +152,7 @@ async function updateQuantity(item) {
 
 async function removeItem(id) {
   try {
-    await axios.delete(`http://localhost:3000/api/basket/${id}`);
+    await api.delete(`/api/basket/${id}`);
     basket.value = basket.value.filter((i) => i._id !== id);
   } catch (err) {
     console.error("❌ Failed to remove item:", err);
@@ -335,3 +335,4 @@ function goToCheckout() {
   transform: scale(1.05);
 }
 </style>
+
